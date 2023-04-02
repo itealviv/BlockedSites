@@ -1,10 +1,14 @@
 package itea.serhii.sbserver.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class BlockedSite {
 
     @Id
@@ -13,26 +17,7 @@ public class BlockedSite {
 
     private String url;
 
-    public BlockedSite() {
-    }
-
     public BlockedSite(String url) {
-        this.url = url;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
         this.url = url;
     }
 }
